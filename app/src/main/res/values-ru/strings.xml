@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Сроки задачи</string>
+    <string name="ok">OK</string>
+    <string name="start_date_and_time">Дата и время старта задачи: %1$s</string>
+    <string name="end_date_and_time">Дата и время окончания задачи: %1$s</string>
+    <string name="toast_message">
+        Дата начала: %1$s;\n
+        Дата окончания: %2$s.
+    </string>
+    <string name="error">Ошибка: дата окончания задачи раньше даты начала</string>
+</resources>

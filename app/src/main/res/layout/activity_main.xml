@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/chooseStartDateButtonId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@android:drawable/btn_default"
+        android:backgroundTint="@android:color/holo_purple"
+        android:gravity="start|center_vertical"
+        android:text="@string/start_date_and_time"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/chooseEndDateButtonId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@android:drawable/btn_default"
+        android:backgroundTint="@android:color/holo_purple"
+        android:enabled="false"
+        android:gravity="start|center_vertical"
+        android:text="@string/end_date_and_time"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+    <CalendarView
+        android:id="@+id/startDateCalendarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"/>
+    <CalendarView
+        android:id="@+id/endDateCalendarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E2E2E2"/>
+    <Button
+        android:id="@+id/okButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_purple"
+        android:layout_margin="16dp"
+        android:background="@android:drawable/btn_default"
+        android:textColor="@android:color/white"
+        android:text="@string/ok"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"/>
+</LinearLayout>

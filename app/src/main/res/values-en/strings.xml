@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Task Time Limits</string>
+    <string name="ok">OK</string>
+    <string name="start_date_and_time">Task start date and time: %1$s</string>
+    <string name="end_date_and_time">Task end date end and time: %1$s</string>
+    <string name="toast_message">
+        Start date: %1$s;\n
+        End date: %2$s.
+    </string>
+    <string name="error">Error: end date is earlier then start date</string>
+</resources>
