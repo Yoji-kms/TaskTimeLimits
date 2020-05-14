@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.Toast;
 
-import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 public class MainActivity extends AppCompatActivity {
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         endCalendarView.setVisibility(View.GONE);
     }
 
-    View.OnClickListener chooseStartDateButtonOnClickListener = new View.OnClickListener() {
+    private View.OnClickListener chooseStartDateButtonOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             startCalendarView.setVisibility(View.VISIBLE);
@@ -62,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    View.OnClickListener chooseEndDateButtonOnClickListener = new View.OnClickListener() {
+    private View.OnClickListener chooseEndDateButtonOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             startCalendarView.setVisibility(View.GONE);
@@ -70,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    View.OnClickListener okButtonOnClickListener = new View.OnClickListener() {
+    private View.OnClickListener okButtonOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             String toastMessage = getString(R.string.toast_message, startDateText, endDateText);
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    CalendarView.OnDateChangeListener startCalendarOnDateChangeListener = new CalendarView.OnDateChangeListener() {
+    private CalendarView.OnDateChangeListener startCalendarOnDateChangeListener = new CalendarView.OnDateChangeListener() {
         @Override
         public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
             startDateText = i+"-"+i1+"-"+i2;
@@ -93,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    CalendarView.OnDateChangeListener endCalendarOnDateChangeListener = new CalendarView.OnDateChangeListener() {
+    private CalendarView.OnDateChangeListener endCalendarOnDateChangeListener = new CalendarView.OnDateChangeListener() {
         @Override
         public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
             endDateText = i+"-"+i1+"-"+i2;
@@ -105,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
             if (startDate > endDate){
                 Toast.makeText(MainActivity.this, R.string.error, Toast.LENGTH_LONG).show();
                 chooseEndDateButton.setText(getString(R.string.end_date_and_time, ""));
-                endDate = 0;
             }else{
                 okButton.setEnabled(true);
             }
