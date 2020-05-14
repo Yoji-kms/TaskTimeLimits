@@ -81,11 +81,11 @@ public class MainActivity extends AppCompatActivity {
 
     private CalendarView.OnDateChangeListener startCalendarOnDateChangeListener = new CalendarView.OnDateChangeListener() {
         @Override
-        public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
-            startDateText = i+"-"+i1+"-"+i2;
+        public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int dayOfMonth) {
+            startDateText = year + "-" + month +"-" + dayOfMonth;
             chooseStartDateButton.setText(getString(R.string.start_date_and_time, startDateText));
             gregorianCalendar = new GregorianCalendar();
-            gregorianCalendar.set(i, i1, i2);
+            gregorianCalendar.set(year, month, dayOfMonth);
             startDate = gregorianCalendar.getTimeInMillis();
             startCalendarView.setVisibility(View.GONE);
             chooseEndDateButton.setEnabled(true);
@@ -94,11 +94,11 @@ public class MainActivity extends AppCompatActivity {
 
     private CalendarView.OnDateChangeListener endCalendarOnDateChangeListener = new CalendarView.OnDateChangeListener() {
         @Override
-        public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
-            endDateText = i+"-"+i1+"-"+i2;
+        public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int dayOfMonth) {
+            endDateText = year + "-" + month + "-" + dayOfMonth;
             chooseEndDateButton.setText(getString(R.string.end_date_and_time, endDateText));
             gregorianCalendar = new GregorianCalendar();
-            gregorianCalendar.set(i, i1, i2);
+            gregorianCalendar.set(year, month, dayOfMonth);
             long endDate = gregorianCalendar.getTimeInMillis();
             endCalendarView.setVisibility(View.GONE);
             if (startDate > endDate){
